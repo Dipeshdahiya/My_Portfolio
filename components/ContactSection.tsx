@@ -27,17 +27,19 @@ export default function ContactSection() {
     <section
       id="contact"
       ref={sectionRef}
-      className="min-h-screen bg-black flex items-center justify-center lg:pl-32 "
-
+      className="min-h-screen bg-black flex items-center justify-center pl-6 lg:pl-32 overflow-hidden"
     >
-      <div className=" -ml-32 lg:ml-0 w-full cursor-default">
+      <div className="w-full  cursor-default text-center lg:text-left">
+        
         {/* Heading */}
-        <div className="mb-12 overflow-hidden">
+        <div className="mb-12 ">
           <h2 className="font-bold mb-6 leading-none">
+            
             {/* Let's get in */}
             <span
               className={`
-                block text-[#FF6B35] text-2xl md:text-3xl lg:text-4xl
+                block text-[#FF6B35]
+                text-xl sm:text-2xl md:text-3xl lg:text-4xl
                 transition-all duration-1000 ease-out
                 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'}
               `}
@@ -48,7 +50,8 @@ export default function ContactSection() {
             {/* Touch */}
             <span
               className={`
-                block text-white text-5xl md:text-7xl lg:text-8xl
+                block text-white
+                text-4xl sm:text-5xl md:text-6xl lg:text-8xl
                 transition-opacity duration-2000 ease-out delay-100
                 ${isVisible ? 'opacity-100' : 'opacity-0'}
               `}
@@ -58,25 +61,28 @@ export default function ContactSection() {
           </h2>
 
           {/* Animated Line */}
-          <div className="overflow-hidden">
+          <div className="">
             <span
               className={`
                 block h-[1px] bg-[#FF6B35]
                 transition-transform duration-1000 ease-out delay-500
                 origin-left
-                ${isVisible ? 'scale-x-100' : 'scale-x-0'}
+                ${isVisible ? 'scale-x-400' : 'scale-x-0'}
               `}
             />
           </div>
         </div>
+        
 
         {/* Contact Details */}
         <div className="space-y-8">
+          
           {/* Phone */}
           <a
             href="tel:7496801160"
             className={`
-              flex items-center cursor-pointer space-x-4 text-white hover:text-[#FF6B35]
+              flex items-center justify-center lg:justify-start
+              space-x-4 text-white hover:text-[#FF6B35]
               transition-all duration-700 ease-out delay-600
               ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}
             `}
@@ -91,7 +97,7 @@ export default function ContactSection() {
                 />
               </svg>
             </div>
-            <span className="text-xl md:text-2xl font-medium">
+            <span className="text-lg sm:text-xl md:text-2xl font-medium">
               7496801160
             </span>
           </a>
@@ -100,7 +106,8 @@ export default function ContactSection() {
           <a
             href="mailto:brijeshdahiya18@gmail.com"
             className={`
-              flex items-center cursor-pointer space-x-4 text-white hover:text-[#FF6B35]
+              flex items-center justify-center lg:justify-start
+              space-x-4 text-white hover:text-[#FF6B35]
               transition-all duration-700 ease-out delay-800
               ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}
             `}
@@ -115,13 +122,13 @@ export default function ContactSection() {
                 />
               </svg>
             </div>
-            <span className="text-xl md:text-2xl font-medium">
+            <span className="text-lg sm:text-xl md:text-2xl font-medium break-all">
               brijeshdahiya18@gmail.com
             </span>
           </a>
+
         </div>
       </div>
     </section>
   )
 }
-
