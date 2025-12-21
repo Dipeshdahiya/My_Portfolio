@@ -104,10 +104,10 @@ export default function Sidebar() {
               >
                 <Link
                   href={item.href}
-                  className="group flex items-center space-x-4 text-white hover:text-[#FF6B35]"
+                  className="group flex items-center transition-all duration-500 ease-out space-x-4 text-white hover:text-[#FF6B35]"
                   onClick={() => setIsOpen(false)}
                 >
-                  <item.icon className="text-[24px] group-hover:text-[#FF6B35]" />
+                  <item.icon className="text-[24px] transition-all duration-500 ease-out group-hover:text-[#FF6B35]" />
                   <span className="text-[20px] tracking-[8px] font-light">
                     {item.label}
                   </span>
@@ -121,7 +121,7 @@ export default function Sidebar() {
         <div
           className={`
     
-    transition-all duration-700 ease-out
+    transition-all duration-500 ease-out
     ${animateIn ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
   `}
           style={{ transitionDelay: "420ms" }}
@@ -138,7 +138,7 @@ export default function Sidebar() {
       tracking-[3px]
       text-sm
       rounded-md
-      transition-all duration-300
+      transition-all duration-500
       hover:bg-[#FF6B35]
       hover:border-black
       hover:text-black

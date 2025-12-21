@@ -13,7 +13,7 @@ export default function HeroSection() {
 
   return (
     <div className="relative w-full flex flex-col items-center justify-center overflow-hidden">
-      <div className="relative w-full h-[75vh] flex items-center justify-center overflow-hidden group">
+      <div className="relative w-full h-[85vh] flex items-center justify-center overflow-hidden group">
         {/* Background Video */}
         <video
           autoPlay
@@ -82,7 +82,460 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-      <div className="relative  w-full h-[80vh] overflow-hidden group cursor-pointer">
+
+
+
+      {/*AI-Interview */}
+
+
+      <div className="relative  w-full h-[90vh] overflow-hidden group cursor-pointer">
+        <Link
+          href="/jobportal"
+          aria-label="Go to Job Portal"
+          className="absolute inset-0 z-20"
+        />
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center "
+          style={{
+            backgroundImage: "url('../assets/interview.png')",
+            opacity: 0.6,
+          }}
+        />
+
+        <div className="flex flex-col md:flex-row  w-full h-full">
+          
+
+          {/* Right Content Area */}
+          <div className="relative z-10 w-full h-1/2 md:w-[50%] md:h-full flex justify-center items-center">
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/30"></div>
+
+            {/* Content */}
+            <div className="relative flex items-center justify-center text-white">
+              <div
+                className="
+        flex flex-col items-center justify-center text-center
+        transition-transform duration-500 ease-out
+        group-hover:-translate-y-2
+      "
+              >
+                {/* Heading */}
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4 max-w-xl">
+                  Interview, Reimagined
+                </h1>
+
+                {/* Animated Line */}
+                <div className="overflow-hidden my-4 w-full flex justify-center">
+                  <span
+                    className="
+            block h-[1px] w-full bg-white
+            scale-x-0 origin-center
+            transition-transform duration-500 ease-out
+            group-hover:scale-x-100
+          "
+                  />
+                </div>
+
+                {/* Subheading */}
+                <p className="text-base md:text-lg text-[#FF6B35] font-bold tracking-[5px]">
+                  AI INTERVIEWER
+                </p>
+
+                {/* Plus Icon */}
+                <div
+                  className="
+          relative mt-6 w-6 h-6
+          opacity-0
+          transition-all duration-500 ease-out
+          group-hover:opacity-100
+          group-hover:translate-y-2
+        "
+                >
+                  {/* Horizontal */}
+                  <span className="absolute top-1/2 left-0 w-full h-[2px] bg-[#FF6B35] -translate-y-1/2" />
+
+                  {/* Vertical */}
+                  <span
+                    className="
+            absolute top-1/2 left-1/2 h-full w-[2px] bg-[#FF6B35]
+            -translate-x-1/2 -translate-y-1/2
+            -rotate-90
+            transition-transform duration-500 ease-out
+            group-hover:rotate-0
+          "
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="w-full h-1/2 md:w-[50%] md:h-full"></div>
+        </div>
+      </div>
+
+
+      {/*CCTV Anomaly Detection*/}
+
+
+
+      <div className="relative  w-full h-[90vh] overflow-hidden group cursor-pointer">
+        <Link
+          href="/jobportal"
+          aria-label="Go to Job Portal"
+          className="absolute inset-0 z-20"
+        />
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center "
+          style={{
+            backgroundImage: "url('../assets/cctv1.png')",
+            opacity: 0.6,
+          }}
+        />
+
+        <div className="flex flex-col md:flex-row  w-full h-full">
+          <div className="w-full h-1/2 md:w-[50%] md:h-full"></div>
+
+          {/* Right Content Area */}
+          <div className="relative z-10 w-full h-1/2 md:w-[50%] md:h-full flex justify-center items-center">
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/30"></div>
+
+            {/* Content */}
+            <div className="relative flex items-center justify-center text-white">
+              <div
+                className="
+        flex flex-col items-center justify-center text-center
+        transition-transform duration-500 ease-out
+        group-hover:-translate-y-2
+      "
+              >
+                {/* Heading */}
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4 max-w-xl">
+                  Seeing Beyond the Ordinary.
+                </h1>
+
+                {/* Animated Line */}
+                <div className="overflow-hidden my-4 w-full flex justify-center">
+                  <span
+                    className="
+            block h-[1px] w-full bg-white
+            scale-x-0 origin-center
+            transition-transform duration-500 ease-out
+            group-hover:scale-x-100
+          "
+                  />
+                </div>
+
+                {/* Subheading */}
+                <p className="text-base md:text-lg text-[#FF6B35] font-bold tracking-[5px]">
+                  ANOMALY DETECTION AI
+                </p>
+
+                {/* Plus Icon */}
+                <div
+                  className="
+          relative mt-6 w-6 h-6
+          opacity-0
+          transition-all duration-500 ease-out
+          group-hover:opacity-100
+          group-hover:translate-y-2
+        "
+                >
+                  {/* Horizontal */}
+                  <span className="absolute top-1/2 left-0 w-full h-[2px] bg-[#FF6B35] -translate-y-1/2" />
+
+                  {/* Vertical */}
+                  <span
+                    className="
+            absolute top-1/2 left-1/2 h-full w-[2px] bg-[#FF6B35]
+            -translate-x-1/2 -translate-y-1/2
+            -rotate-90
+            transition-transform duration-500 ease-out
+            group-hover:rotate-0
+          "
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      {/*Remoteflow*/}
+
+
+      <div className="relative  w-full h-[90vh] overflow-hidden group cursor-pointer">
+        <Link
+          href="/jobportal"
+          aria-label="Go to Job Portal"
+          className="absolute inset-0 z-20"
+        />
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center "
+          style={{
+            backgroundImage: "url('../assets/remoteflow.png')",
+            opacity: 0.6,
+          }}
+        />
+
+        <div className="flex flex-col md:flex-row  w-full h-full">
+          
+
+          {/* Right Content Area */}
+          <div className="relative z-10 w-full h-1/2 md:w-[50%] md:h-full flex justify-center items-center">
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/30"></div>
+
+            {/* Content */}
+            <div className="relative flex items-center justify-center text-white">
+              <div
+                className="
+        flex flex-col items-center justify-center text-center
+        transition-transform duration-500 ease-out
+        group-hover:-translate-y-2
+      "
+              >
+                {/* Heading */}
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4 max-w-xl">
+                  Work, Without the Noise
+                </h1>
+
+                {/* Animated Line */}
+                <div className="overflow-hidden my-4 w-full flex justify-center">
+                  <span
+                    className="
+            block h-[1px] w-full bg-white
+            scale-x-0 origin-center
+            transition-transform duration-500 ease-out
+            group-hover:scale-x-100
+          "
+                  />
+                </div>
+
+                {/* Subheading */}
+                <p className="text-base md:text-lg text-[#FF6B35] font-bold tracking-[5px]">
+                  REMOTEFLOW
+                </p>
+
+                {/* Plus Icon */}
+                <div
+                  className="
+          relative mt-6 w-6 h-6
+          opacity-0
+          transition-all duration-500 ease-out
+          group-hover:opacity-100
+          group-hover:translate-y-2
+        "
+                >
+                  {/* Horizontal */}
+                  <span className="absolute top-1/2 left-0 w-full h-[2px] bg-[#FF6B35] -translate-y-1/2" />
+
+                  {/* Vertical */}
+                  <span
+                    className="
+            absolute top-1/2 left-1/2 h-full w-[2px] bg-[#FF6B35]
+            -translate-x-1/2 -translate-y-1/2
+            -rotate-90
+            transition-transform duration-500 ease-out
+            group-hover:rotate-0
+          "
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="w-full h-1/2 md:w-[50%] md:h-full"></div>
+        </div>
+      </div>  
+
+
+      {/*Veya shoppings*/}
+
+
+
+      <div className="relative  w-full h-[90vh] overflow-hidden group cursor-pointer">
+        <Link
+          href="/jobportal"
+          aria-label="Go to Job Portal"
+          className="absolute inset-0 z-20"
+        />
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center "
+          style={{
+            backgroundImage: "url('../assets/veya_shopping.png')",
+            opacity: 0.6,
+          }}
+        />
+
+        <div className="flex flex-col md:flex-row  w-full h-full">
+          <div className="w-full h-1/2 md:w-[50%] md:h-full"></div>
+
+          {/* Right Content Area */}
+          <div className="relative z-10 w-full h-1/2 md:w-[50%] md:h-full flex justify-center items-center">
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/30"></div>
+
+            {/* Content */}
+            <div className="relative flex items-center justify-center text-white">
+              <div
+                className="
+        flex flex-col items-center justify-center text-center
+        transition-transform duration-500 ease-out
+        group-hover:-translate-y-2
+      "
+              >
+                {/* Heading */}
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4 max-w-xl">
+                  Curated Beauty. Thoughtful Gifting.
+                </h1>
+
+                {/* Animated Line */}
+                <div className="overflow-hidden my-4 w-full flex justify-center">
+                  <span
+                    className="
+            block h-[1px] w-full bg-white
+            scale-x-0 origin-center
+            transition-transform duration-500 ease-out
+            group-hover:scale-x-100
+          "
+                  />
+                </div>
+
+                {/* Subheading */}
+                <p className="text-base md:text-lg text-[#FF6B35] font-bold tracking-[5px]">
+                  VEYA SHOPPING
+                </p>
+
+                {/* Plus Icon */}
+                <div
+                  className="
+          relative mt-6 w-6 h-6
+          opacity-0
+          transition-all duration-500 ease-out
+          group-hover:opacity-100
+          group-hover:translate-y-2
+        "
+                >
+                  {/* Horizontal */}
+                  <span className="absolute top-1/2 left-0 w-full h-[2px] bg-[#FF6B35] -translate-y-1/2" />
+
+                  {/* Vertical */}
+                  <span
+                    className="
+            absolute top-1/2 left-1/2 h-full w-[2px] bg-[#FF6B35]
+            -translate-x-1/2 -translate-y-1/2
+            -rotate-90
+            transition-transform duration-500 ease-out
+            group-hover:rotate-0
+          "
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      {/* JobPortal */}
+
+
+      <div className="relative  w-full h-[90vh] overflow-hidden group cursor-pointer">
+        <Link
+          href="/jobportal"
+          aria-label="Go to Job Portal"
+          className="absolute inset-0 z-20"
+        />
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center "
+          style={{
+            backgroundImage: "url('../assets/ai-trainer.png')",
+            opacity: 0.6,
+          }}
+        />
+
+        <div className="flex flex-col md:flex-row  w-full h-full">
+          
+
+          {/* Right Content Area */}
+          <div className="relative z-10 w-full h-1/2 md:w-[50%] md:h-full flex justify-center items-center">
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/30"></div>
+
+            {/* Content */}
+            <div className="relative flex items-center justify-center text-white">
+              <div
+                className="
+        flex flex-col items-center justify-center text-center
+        transition-transform duration-500 ease-out
+        group-hover:-translate-y-2
+      "
+              >
+                {/* Heading */}
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4 max-w-xl">
+                  Train Smarter
+                </h1>
+
+                {/* Animated Line */}
+                <div className="overflow-hidden my-4 w-full flex justify-center">
+                  <span
+                    className="
+            block h-[1px] w-full bg-white
+            scale-x-0 origin-center
+            transition-transform duration-500 ease-out
+            group-hover:scale-x-100
+          "
+                  />
+                </div>
+
+                {/* Subheading */}
+                <p className="text-base md:text-lg text-[#FF6B35] font-bold tracking-[5px]">
+                  AI FITNESS COACH
+                </p>
+
+                {/* Plus Icon */}
+                <div
+                  className="
+          relative mt-6 w-6 h-6
+          opacity-0
+          transition-all duration-500 ease-out
+          group-hover:opacity-100
+          group-hover:translate-y-2
+        "
+                >
+                  {/* Horizontal */}
+                  <span className="absolute top-1/2 left-0 w-full h-[2px] bg-[#FF6B35] -translate-y-1/2" />
+
+                  {/* Vertical */}
+                  <span
+                    className="
+            absolute top-1/2 left-1/2 h-full w-[2px] bg-[#FF6B35]
+            -translate-x-1/2 -translate-y-1/2
+            -rotate-90
+            transition-transform duration-500 ease-out
+            group-hover:rotate-0
+          "
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="w-full h-1/2 md:w-[50%] md:h-full"></div>
+        </div>
+      </div>
+
+
+      {/* JobPortal */}
+
+
+      <div className="relative  w-full h-[90vh] overflow-hidden group cursor-pointer">
         <Link
           href="/jobportal"
           aria-label="Go to Job Portal"
@@ -92,14 +545,13 @@ export default function HeroSection() {
         <div
           className="absolute inset-0 bg-cover bg-center scale-x-[-1]"
           style={{
-            backgroundImage: "url('../assets/jobportal.jpg')",
+            backgroundImage: "url('../assets/jobportal.png')",
             opacity: 0.6,
           }}
         />
 
         <div className="flex flex-col md:flex-row  w-full h-full">
           <div className="w-full h-1/2 md:w-[50%] md:h-full"></div>
-
           {/* Right Content Area */}
           <div className="relative z-10 w-full h-1/2 md:w-[50%] md:h-full flex justify-center items-center">
             {/* Overlay */}
@@ -165,6 +617,93 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
+
+
+      {/* ChatBot */}
+
+
+      <div className="relative  w-full h-[90vh] overflow-hidden group cursor-pointer">
+        <Link
+          href="/jobportal"
+          aria-label="Go to Job Portal"
+          className="absolute inset-0 z-20"
+        />
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center scale-x-[-1] "
+          style={{
+            backgroundImage: "url('../assets/chatbot.jpg')",
+            opacity: 0.6,
+          }}
+        />
+
+        <div className="flex flex-col md:flex-row  w-full h-full">
+          {/* Right Content Area */}
+          <div className="relative z-10 w-full h-1/2 md:w-[50%] md:h-full flex justify-center items-center">
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/30"></div>
+
+            {/* Content */}
+            <div className="relative flex items-center justify-center text-white">
+              <div
+                className="
+        flex flex-col items-center justify-center text-center
+        transition-transform duration-500 ease-out
+        group-hover:-translate-y-2
+      "
+              >
+                {/* Heading */}
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4 max-w-xl">
+                  Future of Conversation
+                </h1>
+
+                {/* Animated Line */}
+                <div className="overflow-hidden my-4 w-full flex justify-center">
+                  <span
+                    className="
+            block h-[1px] w-full bg-white
+            scale-x-0 origin-center
+            transition-transform duration-500 ease-out
+            group-hover:scale-x-100
+          "
+                  />
+                </div>
+
+                {/* Subheading */}
+                <p className="text-base md:text-lg text-[#FF6B35] font-bold tracking-[5px]">
+                  CHATBOT
+                </p>
+
+                {/* Plus Icon */}
+                <div
+                  className="
+          relative mt-6 w-6 h-6
+          opacity-0
+          transition-all duration-500 ease-out
+          group-hover:opacity-100
+          group-hover:translate-y-2
+        "
+                >
+                  {/* Horizontal */}
+                  <span className="absolute top-1/2 left-0 w-full h-[2px] bg-[#FF6B35] -translate-y-1/2" />
+
+                  {/* Vertical */}
+                  <span
+                    className="
+            absolute top-1/2 left-1/2 h-full w-[2px] bg-[#FF6B35]
+            -translate-x-1/2 -translate-y-1/2
+            -rotate-90
+            transition-transform duration-500 ease-out
+            group-hover:rotate-0
+          "
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="w-full h-1/2 md:w-[50%] md:h-full"></div>
+        </div>
+      </div>  
     </div>
   );
 }
