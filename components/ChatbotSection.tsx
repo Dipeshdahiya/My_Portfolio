@@ -55,7 +55,7 @@ export default function JobportalSection() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('../assets/jobportal.png')",
+            backgroundImage: "url('../assets/chatbot.jpg')",
           }}
         />
         {/* Dark Overlay */}
@@ -73,7 +73,7 @@ export default function JobportalSection() {
             viewport={{ once: false }}
             className="text-white text-4xl md:text-6xl font-semibold text-center"
           >
-            Your Career Starts Here
+            Future of Conversation
           </motion.h1>
         </div>
 
@@ -89,8 +89,8 @@ export default function JobportalSection() {
           viewport={{ once: false }}
           className="absolute bottom-8 w-full flex justify-center z-10"
         >
-          <p className="text-white/80 tracking-[5px] font-semibold text-2xl">
-            JOBPORTAL
+          <p className="text-purple-900 tracking-[5px] font-semibold text-2xl">
+            CHATBOT
           </p>
         </motion.div>
       </motion.div>
@@ -451,11 +451,11 @@ export default function JobportalSection() {
     cursor-pointer
   "
         style={{
-          backgroundImage: "url('../assets/chatbot.jpg')",
+          backgroundImage: "url('../assets/interview.png')",
         }}
       >
         {/* Overlay */}
-        <Link href="/chatbot">
+        <Link href="/Ai-interview">
           <motion.div
             variants={{
               rest: { backgroundColor: "rgba(0,0,0,0.4)" },
@@ -490,7 +490,7 @@ export default function JobportalSection() {
           cursor-pointer
         "
             >
-              Chatbot
+              AI-Interview
             </motion.span>
           </div>
         </Link>

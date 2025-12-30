@@ -29,7 +29,7 @@ export default function ContactSection() {
       ref={sectionRef}
       className="min-h-screen bg-black flex items-center justify-center pl-6 lg:pl-32 overflow-hidden"
     >
-      <div className="w-full  cursor-default text-center lg:text-left">
+      <div className="w-full  cursor-default text-left lg:text-left">
         
         {/* Heading */}
         <div className="mb-12 ">
@@ -39,7 +39,7 @@ export default function ContactSection() {
             <span
               className={`
                 block text-[#FF6B35]
-                text-xl sm:text-2xl md:text-3xl lg:text-4xl
+                text-3xl sm:text-3xl md:text-4xl lg:text-4xl
                 transition-all duration-1000 ease-out
                 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'}
               `}
@@ -51,7 +51,7 @@ export default function ContactSection() {
             <span
               className={`
                 block text-white
-                text-4xl sm:text-5xl md:text-6xl lg:text-8xl
+                text-6xl sm:text-6xl md:text-6xl lg:text-8xl
                 transition-opacity duration-2000 ease-out delay-100
                 ${isVisible ? 'opacity-100' : 'opacity-0'}
               `}
@@ -81,14 +81,14 @@ export default function ContactSection() {
           <a
             href="tel:7496801160"
             className={`
-              flex items-center justify-center lg:justify-start
+              flex items-center justify-start lg:justify-start
               space-x-4 text-white hover:text-[#FF6B35]
               transition-all duration-700 ease-out delay-600
               ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}
             `}
           >
             <div className="w-12 h-12 flex items-center justify-center">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -97,7 +97,7 @@ export default function ContactSection() {
                 />
               </svg>
             </div>
-            <span className="text-lg sm:text-xl md:text-2xl font-medium">
+            <span className="text-2xl sm:text-2xl md:text-2xl font-medium">
               7496801160
             </span>
           </a>
@@ -106,14 +106,14 @@ export default function ContactSection() {
           <a
             href="mailto:brijeshdahiya18@gmail.com"
             className={`
-              flex items-center justify-center lg:justify-start
+              flex items-center justify-start lg:justify-start
               space-x-4 text-white hover:text-[#FF6B35]
               transition-all duration-700 ease-out delay-800
               ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}
             `}
           >
             <div className="w-12 h-12 flex items-center justify-center">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -122,7 +122,7 @@ export default function ContactSection() {
                 />
               </svg>
             </div>
-            <span className="text-lg sm:text-xl md:text-2xl font-medium break-all">
+            <span className="text-2xl sm:text-xl md:text-2xl font-medium break-all">
               brijeshdahiya18@gmail.com
             </span>
           </a>

@@ -15,15 +15,15 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
 
   // 🔹 Centralized text size control (mobile-first)
   const textSize = {
-    large: "text-4xl sm:text-5xl md:text-7xl lg:text-8xl",
-    medium: "text-3xl sm:text-4xl md:text-6xl lg:text-7xl",
-    small: "text-xl sm:text-2xl md:text-4xl lg:text-5xl",
+    large: "text-5xl sm:text-5xl md:text-7xl lg:text-8xl",
+    medium: "text-4xl sm:text-4xl md:text-6xl lg:text-7xl",
+    small: "text-3xl sm:text-3xl md:text-5xl lg:text-5xl",
   };
 
   const textLines = [
     {
       parts: [
-        { text: "Hello.", color: "orange", size: "medium" },
+        { text: "Hello.\u00A0", color: "orange", size: "medium" },
         { text: " I am", color: "gray", size: "small" },
       ],
     },
@@ -32,14 +32,14 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
     },
     {
       parts: [
-        { text: "a ", color: "gray", size: "small" },
-        { text: "Full-Stack Developer", color: "orange", size: "medium" },
+        { text: "a \u00A0", color: "gray", size: "small" },
+        { text: "AI/ML Engineer", color: "orange", size: "medium" },
       ],
     },
     {
       parts: [
-        { text: "and ", color: "gray", size: "small" },
-        { text: "AI/ML Engineer", color: "orange", size: "medium" },
+        { text: "and \u00A0", color: "gray", size: "small" },
+        { text: "Full-Stack Developer", color: "orange", size: "medium" },
       ],
     },
   ];
@@ -94,7 +94,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
           transition: "opacity 0.5s ease-out",
         }}
       >
-        <div className="text-center md:text-left">
+        <div className="text-left md:text-left">
           {textLines.map((line, index) => {
             const isVisible = index < visibleWords;
 

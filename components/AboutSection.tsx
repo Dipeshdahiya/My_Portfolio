@@ -51,12 +51,12 @@ export default function AboutSection() {
           </h1>
 
           <div className="text-4xl tracking-[2px] md:text-4xl lg:text-5xl font-bold ">
-            <span className="text-[#e85925]">Full-Stack Developer</span>
+            <span className="text-[#e85925]">AI/ML Engineer</span>
           </div>
 
           <div className="text-4xl md:text-4xl  lg:text-5xl font-bold mb-8">
             <span className="text-black mr-2">and</span>
-            <span className="text-[#e85925] tracking-[2px]">AI/ML Engineer</span>
+            <span className="text-[#e85925] tracking-[2px]">Full-Stack Developer</span>
           </div>
           
 

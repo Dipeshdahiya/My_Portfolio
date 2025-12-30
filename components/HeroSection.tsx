@@ -1,6 +1,7 @@
 "use client";
 
 import { div } from "@tensorflow/tfjs";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -14,16 +15,22 @@ export default function HeroSection() {
   return (
     <div className="relative w-full flex flex-col items-center justify-center overflow-hidden">
       <div className="relative w-full h-[85vh] flex items-center justify-center overflow-hidden group">
-        {/* Background Video */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 object-cover min-h-full min-w-full"
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="absolute inset-0"
         >
-          <source src="../assets/hero.mp4" type="video/mp4" />
-        </video>
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 object-cover min-h-full min-w-full"
+          >
+            <source src="../assets/hero.mp4" type="video/mp4" />
+          </video>
+        </motion.div>
 
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
@@ -83,10 +90,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-
-
       {/*AI-Interview */}
-
 
       <div className="relative  w-full h-[90vh] overflow-hidden group cursor-pointer">
         <Link
@@ -95,8 +99,11 @@ export default function HeroSection() {
           className="absolute inset-0 z-20"
         />
         {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center "
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: "url('../assets/interview.png')",
             opacity: 0.6,
@@ -104,8 +111,6 @@ export default function HeroSection() {
         />
 
         <div className="flex flex-col md:flex-row  w-full h-full">
-          
-
           {/* Right Content Area */}
           <div className="relative z-10 w-full h-1/2 md:w-[50%] md:h-full flex justify-center items-center">
             {/* Overlay */}
@@ -173,10 +178,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-
       {/*CCTV Anomaly Detection*/}
-
-
 
       <div className="relative  w-full h-[90vh] overflow-hidden group cursor-pointer">
         <Link
@@ -262,10 +264,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-
-
       {/*Remoteflow*/}
-
 
       <div className="relative  w-full h-[90vh] overflow-hidden group cursor-pointer">
         <Link
@@ -283,8 +282,6 @@ export default function HeroSection() {
         />
 
         <div className="flex flex-col md:flex-row  w-full h-full">
-          
-
           {/* Right Content Area */}
           <div className="relative z-10 w-full h-1/2 md:w-[50%] md:h-full flex justify-center items-center">
             {/* Overlay */}
@@ -350,12 +347,9 @@ export default function HeroSection() {
           </div>
           <div className="w-full h-1/2 md:w-[50%] md:h-full"></div>
         </div>
-      </div>  
-
+      </div>
 
       {/*Veya shoppings*/}
-
-
 
       <div className="relative  w-full h-[90vh] overflow-hidden group cursor-pointer">
         <Link
@@ -441,10 +435,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-
-
       {/* JobPortal */}
-
 
       <div className="relative  w-full h-[90vh] overflow-hidden group cursor-pointer">
         <Link
@@ -462,8 +453,6 @@ export default function HeroSection() {
         />
 
         <div className="flex flex-col md:flex-row  w-full h-full">
-          
-
           {/* Right Content Area */}
           <div className="relative z-10 w-full h-1/2 md:w-[50%] md:h-full flex justify-center items-center">
             {/* Overlay */}
@@ -531,9 +520,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-
       {/* JobPortal */}
-
 
       <div className="relative  w-full h-[90vh] overflow-hidden group cursor-pointer">
         <Link
@@ -618,14 +605,12 @@ export default function HeroSection() {
         </div>
       </div>
 
-
       {/* ChatBot */}
-
 
       <div className="relative  w-full h-[90vh] overflow-hidden group cursor-pointer">
         <Link
-          href="/jobportal"
-          aria-label="Go to Job Portal"
+          href="/chatbot"
+          aria-label="Go to ChatBot"
           className="absolute inset-0 z-20"
         />
         {/* Background Image */}
@@ -703,7 +688,7 @@ export default function HeroSection() {
           </div>
           <div className="w-full h-1/2 md:w-[50%] md:h-full"></div>
         </div>
-      </div>  
+      </div>
     </div>
   );
 }
