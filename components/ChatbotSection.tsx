@@ -2,17 +2,28 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
-export default function JobportalSection() {
+export default function ChatbotSection() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     setVisible(true);
   }, []);
+  const sectionRef = useRef(null);
+
+  // Track scroll progress of THIS section only
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  // Move image upward as user scrolls
+  const y = useTransform(scrollYProgress, [0, 1], [100, -150]);
 
   return (
-    <section className="w-full bg-white">
+    <section className="w-full bg-black">
       <Link href="/work">
         <motion.div
           whileHover={{}}
@@ -98,10 +109,10 @@ export default function JobportalSection() {
       {/* =========================
           SECTION 2 – ABOUT + FEATURES
       ========================== */}
-      <div className="w-full h-screen md:h-[90vh]">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 h-full">
+      <div className="w-full h-screen md:h-full">
+        <div className="grid grid-cols-1 md:grid-cols-2  h-full">
           {/* LEFT – ABOUT */}
-          <div className="bg-white text-black p-8 md:p-12 flex flex-col justify-center">
+          <div className="bg-black text-white p-8 md:p-12 flex flex-col justify-center">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -109,8 +120,9 @@ export default function JobportalSection() {
               viewport={{ once: false, margin: "-120px" }}
               className="text-4xl md:text-4xl font-semibold mb-6"
             >
-              JobPortal — Smart <span className="text-gray-600">Career</span>{" "}
-              Discovery Platform
+              Chatbot — Human-Like{" "}
+              <span className="text-purple-900">Conversations</span> Powered by
+              AI
             </motion.h2>
 
             <motion.p
@@ -118,25 +130,29 @@ export default function JobportalSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
               viewport={{ once: false, margin: "-120px" }}
-              className="text-gray-600 font-semibold text-base md:text-mg tracking-[1px] leading-relaxed text-justify"
+              className="text-gray-400 font-semibold text-base md:text-mg tracking-[1px] leading-relaxed text-justify"
             >
-              JobPortal is a fully responsive, full-stack web application{" "}
-              <span className="text-gray-400 font-medium">
-                built using Django,
+              This chatbot project is a{" "}
+              <span className="text-purple-900 font-medium">
+                machine learning–based
               </span>{" "}
-              designed to simplify the job-hunting experience. It enables users
-              to discover relevant opportunities through intuitive job
-              navigation and advanced filtering, making the search process
-              faster and more efficient. The platform also includes integrated
-              contact and mailing features, ensuring smooth communication
-              between candidates and recruiters. Developed as a fourth-semester
-              academic project, JobPortal focuses on real-world usability, clean
-              architecture, and scalable backend design.
+              conversational system developed as a full-stack web application.
+              The goal of the project is to simulate natural, human-like
+              conversations by understanding user intent and responding in a
+              friendly and meaningful way. It focuses on creating an interactive
+              AI experience that feels intuitive rather than robotic. The system
+              integrates machine learning models with a modern web interface,
+              allowing users to communicate with the AI in real time. Emphasis
+              was placed on clean conversation flow, response relevance, and
+              overall user experience. Built as a 4th-semester academic project
+              at Chitkara University, this project showcases the practical
+              implementation of AI concepts, full-stack development, and
+              conversational design working together in a real-world scenario.
             </motion.p>
           </div>
 
           {/* RIGHT – FEATURES */}
-          <div className="bg-black text-white p-8 md:p-12 flex flex-col items-left lg:items-center justify-center">
+          <div className="bg-white text-black p-8 md:p-12 flex flex-col items-left lg:items-center justify-center">
             <div>
               <motion.h3
                 initial={{ opacity: 0, y: 30 }}
@@ -145,7 +161,7 @@ export default function JobportalSection() {
                 viewport={{ once: false, margin: "-120px" }}
                 className="text-4xl items-start text-left md:text-4xl font-semibold mb-6"
               >
-                Built for Growth
+                Key Features
               </motion.h3>
 
               <motion.ul
@@ -153,13 +169,12 @@ export default function JobportalSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
                 viewport={{ once: false, margin: "-120px" }}
-                className="space-y-4 uppercase items-start text-gray-400 font-semibold text-base md:text-mg tracking-[1px] leading-relaxed"
+                className="space-y-4 uppercase items-start text-gray-600 font-semibold text-base md:text-mg tracking-[1px] leading-relaxed"
               >
-                <li>Smart job recommendations</li>
-                <li>Fast and simple applications</li>
-                <li>Real-time application tracking</li>
-                <li>Company insights and profiles</li>
-                <li>Mobile-first experience</li>
+                <li>Smart Conversations</li>
+                <li>Machine Learning Core</li>
+                <li>Full-Stack System</li>
+                <li>User-Friendly Design</li>
               </motion.ul>
             </div>
           </div>
@@ -169,56 +184,27 @@ export default function JobportalSection() {
       {/* =========================
           SECTION – IMAGE SHOWCASE
           ========================== */}
-      <section className="w-full bg-white h-auto flex items-center justify-center py-20 px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-[1.4fr_0.6fr] gap-10 items-center">
-          {/* LEFT IMAGE (LARGER) */}
-          <motion.div
-            initial={{ opacity: 0, x: -80 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
-            viewport={{ once: false, margin: "-120px" }}
-            className="w-full flex items-center justify-center"
-          >
-            <img
-              src="../assets/projects/jobportal-1.png"
-              alt="Project preview large"
-              className="
-          w-full h-auto 
-          md:w-auto md:h-full
-          object-contain
-        "
-            />
-          </motion.div>
-
-          {/* RIGHT IMAGE (SMALLER, CENTERED) */}
-          <motion.div
-            initial={{ opacity: 0, x: 120 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{
-              duration: 0.9,
-              ease: "easeOut",
-            }}
-            viewport={{ once: false, margin: "-120px" }}
-            className="w-full flex justify-center"
-          >
-            <img
-              src="../assets/projects/jobportal-2.png"
-              alt="Project preview small"
-              className="
-          w-full max-w-[320px]
-          md:w-[80%] md:max-w-none
-          h-auto
-          rounded-xl
-          object-contain
-        "
-            />
-          </motion.div>
+      <section
+        ref={sectionRef}
+        className="w-full bg-black h-[80vh] md:h-[110vh] flex items-center justify-center px-6 md:px-12"
+      >
+        <div className="w-full flex items-center  justify-center ">
+          <motion.img
+            src="../assets/projects/chatbot-1.png"
+            alt="Project preview"
+            style={{ y }}
+            className="
+            w-full h-auto
+            md:w-auto md:h-[110vh]
+            object-contain
+          "
+          />
         </div>
       </section>
       <div className="w-full h-full md:h-screen">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 h-full">
           {/* LEFT – SKILLS USED */}
-          <div className="bg-black text-white p-8 md:p-12 flex flex-col items-left lg:items-center justify-center">
+          <div className="bg-white text-black p-8 md:p-12 flex flex-col items-left lg:items-center justify-center">
             <div>
               <motion.h2
                 initial={{ opacity: 0, y: 30 }}
@@ -234,10 +220,11 @@ export default function JobportalSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
                 viewport={{ once: false, margin: "-120px" }}
-                className="text-white font-semibold italic  tracking-[2px] text-sm mb-8 -mt-4 "
+                className="text-black font-semibold italic  tracking-[2px] text-sm mb-8 -mt-4 "
               >
                 "Comprehensive Technologies for a{" "}
-                <span className="text-gray-400">Robust</span> Platform"
+                <span className="text-purple-900">Intelligent</span>{" "}
+                Conversations"
               </motion.p>
 
               <motion.ul
@@ -245,19 +232,19 @@ export default function JobportalSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
                 viewport={{ once: false, margin: "-120px" }}
-                className="space-y-4 uppercase text-gray-400 font-semibold text-base md:text-mg tracking-[1px] leading-relaxed"
+                className="space-y-4 uppercase text-gray-600 font-semibold text-base md:text-mg tracking-[1px] leading-relaxed"
               >
-                <li>Django & Django REST Framework</li>
-                <li>PostgreSQL & Database Design</li>
-                <li>HTML, CSS, JavaScript</li>
-                <li>Authentication & Role Management</li>
-                <li>Responsive UI Development</li>
+                <li>Machine Learning & NLP</li>
+                <li>Python & AI Libraries</li>
+                <li>Full-Stack Web Development</li>
+                <li>API Integration & Backend Logic</li>
+                <li>Responsive UI Design</li>
               </motion.ul>
             </div>
           </div>
 
           {/* RIGHT – ARCHITECTURE / IMPACT */}
-          <div className="bg-white text-black p-8 md:p-12 flex flex-col justify-center">
+          <div className="bg-black text-white p-8 md:p-12 flex flex-col justify-center">
             <motion.h3
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -273,39 +260,37 @@ export default function JobportalSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
               viewport={{ once: false, margin: "-120px" }}
-              className="text-gray-600 font-semibold text-base md:text-mg tracking-[1px] leading-relaxed text-justify"
+              className="text-gray-400 font-semibold text-base md:text-mg tracking-[1px] leading-relaxed text-justify"
             >
-              The project was designed with a strong emphasis on real-world
-              software engineering practices rather than just academic
-              completion. The architecture prioritizes clarity, modularity, and
-              long-term maintainability, allowing individual components to
-              evolve independently without affecting the overall system.
+              This chatbot project was developed with a strong focus on
+              real-world conversational systems rather than just academic
+              requirements. The architecture emphasizes modularity, clarity, and
+              maintainability, enabling the AI logic, backend services, and
+              frontend interface to evolve independently without disrupting the
+              overall system. <br />
+              <br /> Careful attention was given to efficient request handling
+              and conversation flow. The backend is designed to process user
+              inputs reliably, manage contextual information, and deliver
+              responses with minimal latency. Clean API communication and
+              structured data handling ensure smooth interaction between the AI
+              model and the web application, making the system suitable for
+              scaling and future feature additions.
               <br />
-              <br />
-              Special attention was given to backend efficiency and data
-              consistency, ensuring smooth handling of user requests, job
-              listings, and application workflows. The system supports clean API
-              communication, structured data flow, and scalable database
-              interactions, making it suitable for future expansion into
-              recruiter dashboards, analytics modules, and AI-driven job
-              matching features.
-              <br />
-              <br />
-              Security and reliability were also key considerations throughout
-              development. User authentication, role-based access control, and
-              form validation were implemented to protect sensitive data and
-              maintain platform integrity. Overall, the project reflects a
-              balance between performance, usability, and
-              extensibility—mirroring how production-grade job platforms are
-              built in real industry environments.
+              <br /> Security and reliability were also integral to the
+              development process. Input validation, controlled data flow, and
+              safe handling of user interactions were implemented to maintain
+              system integrity. Overall, the project reflects a balanced
+              approach to performance, usability, and extensibility—closely
+              mirroring how production-ready conversational AI platforms are
+              engineered in real-world environments.
             </motion.p>
           </div>
         </div>
       </div>
-      <section className="w-full bg-white h-full md:h-[90vh] px-6 md:px-12 flex items-center">
+      <section className="w-full bg-black h-full md:h-[90vh] px-6 md:px-12 flex items-center">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full">
           {/* LEFT – TEXT CONTENT */}
-          <div className="text-black flex flex-col justify-center">
+          <div className="text-white flex flex-col justify-center">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -314,7 +299,7 @@ export default function JobportalSection() {
               className="text-4xl md:text-4xl font-semibold mb-6"
             >
               Designed for{" "}
-              <span className="text-gray-600">Speed & Usability</span>
+              <span className="text-purple-900">Speed & Interaction</span>
             </motion.h2>
 
             <motion.p
@@ -322,20 +307,21 @@ export default function JobportalSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
               viewport={{ once: false, margin: "-120px" }}
-              className="text-gray-600 font-semibold text-base md:text-mg tracking-[1px] leading-relaxed text-justify"
+              className="text-gray-400 font-semibold text-base md:text-mg tracking-[1px] leading-relaxed text-justify"
             >
-              Beyond core functionality, the platform was optimized to deliver a
-              smooth and responsive user experience across devices. Page load
-              times, intuitive navigation, and clean UI hierarchy were
-              prioritized to reduce friction during job discovery and
-              application workflows.
+              Beyond core functionality, the chatbot was optimized to deliver
+              fast, smooth, and engaging interactions. Response time,
+              conversation flow, and clarity of replies were prioritized to
+              ensure users experience natural and uninterrupted communication
+              with the AI.
               <br />
               <br />
-              The interface adapts seamlessly to different screen sizes,
-              ensuring consistent usability on mobile, tablet, and desktop
-              environments. Performance-conscious design decisions help maintain
-              stability even as the platform scales with increased users and
-              data volume.
+              The interface is designed to be lightweight and responsive,
+              adapting seamlessly across mobile, tablet, and desktop devices.
+              Performance-focused design choices help maintain stability during
+              continuous conversations and concurrent user interactions,
+              ensuring consistent usability even as the system scales with
+              increased usage and complexity.
             </motion.p>
           </div>
 
@@ -348,14 +334,14 @@ export default function JobportalSection() {
             className="w-full flex justify-center"
           >
             <img
-              src="../assets/projects/jobportal-3.png"
+              src="../assets/projects/chatbot-2.png"
               alt="Platform performance preview"
               className="w-full md:w-[85%] h-auto rounded-xl object-contain"
             />
           </motion.div>
         </div>
       </section>
-      <section className="w-full bg-white h-auto p-20 pb-40 px-6 md:px-12 flex items-center">
+      <section className="w-full bg-black h-auto pb-0 px-6 md:px-12 flex items-center">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full">
           {/* LEFT – IMAGE */}
           <motion.div
@@ -366,14 +352,14 @@ export default function JobportalSection() {
             className="w-full flex justify-center"
           >
             <img
-              src="../assets/projects/jobportal-4.png"
+              src="../assets/projects/chatbot-3.png"
               alt="Connect illustration"
               className="w-full h-auto rounded-xl object-contain"
             />
           </motion.div>
 
           {/* RIGHT – TEXT */}
-          <div className="flex flex-col justify-center text-black">
+          <div className="flex flex-col justify-center text-white">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -390,7 +376,7 @@ export default function JobportalSection() {
                   <span className="whitespace-nowrap">Connect with</span>
 
                   <span className="flex items-center gap-3 whitespace-nowrap">
-                    <span className="text-gray-600">me</span>
+                    <span className="text-purple-900">me</span>
 
                     <motion.span
                       variants={{
@@ -431,7 +417,7 @@ export default function JobportalSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
               viewport={{ once: false, margin: "-120px" }}
-              className="mt-6 text-gray-600 font-semibold text-base md:text-mg tracking-[1px] leading-relaxed"
+              className="mt-6 text-gray-600 font-semibold text-base pb-20 md:text-mg tracking-[1px] leading-relaxed"
             >
               Whether it’s collaboration, opportunities, or a quick conversation
               about technology and product ideas, I’m always open to meaningful
@@ -466,7 +452,7 @@ export default function JobportalSection() {
           />
 
           {/* Content */}
-          <div className="relative z-10 flex flex-col items-center text-center text-white gap-3">
+          <div className="relative z-10 flex flex-col items-center text-center text-black gap-3">
             {/* Top text */}
             <p className="uppercase tracking-[4px] text-sm md:text-base text-white/80">
               Up next

@@ -64,7 +64,7 @@ export default function HeroSection() {
                 block h-[1px] w-full bg-gray-300
                 scale-x-0 origin-center
                 transition-transform duration-500 ease-out
-                group-hover:scale-x-100
+                group-hover:scale-x-100 mx-10
                 group-hover:-translate-y-2
               "
               />
@@ -74,7 +74,7 @@ export default function HeroSection() {
             <p
               className="
               text-base md:text-lg lg:text-lg text-gray-300 max-w-5xl leading-relaxed
-              transition-transform duration-500 ease-out
+              transition-transform duration-500 ease-out p-10
               group-hover:-translate-y-2
             "
             >
