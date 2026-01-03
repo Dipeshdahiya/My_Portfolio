@@ -94,8 +94,8 @@ export default function HeroSection() {
 
       <div className="relative  w-full h-[90vh] overflow-hidden group cursor-pointer">
         <Link
-          href="/jobportal"
-          aria-label="Go to Job Portal"
+          href="/ai-interview"
+          aria-label="Go to AI Interview"
           className="absolute inset-0 z-20"
         />
         {/* Background Image */}
@@ -182,8 +182,8 @@ export default function HeroSection() {
 
       <div className="relative  w-full h-[90vh] overflow-hidden group cursor-pointer">
         <Link
-          href="/jobportal"
-          aria-label="Go to Job Portal"
+          href="/ai-cctv"
+          aria-label="Go to AI CCTV"
           className="absolute inset-0 z-20"
         />
         {/* Background Image */}
@@ -268,8 +268,8 @@ export default function HeroSection() {
 
       <div className="relative  w-full h-[90vh] overflow-hidden group cursor-pointer">
         <Link
-          href="/jobportal"
-          aria-label="Go to Job Portal"
+          href="/remoteflow"
+          aria-label="Go to Remoteflow"
           className="absolute inset-0 z-20"
         />
         {/* Background Image */}
@@ -353,8 +353,8 @@ export default function HeroSection() {
 
       <div className="relative  w-full h-[90vh] overflow-hidden group cursor-pointer">
         <Link
-          href="/jobportal"
-          aria-label="Go to Job Portal"
+          href="/veyashop"
+          aria-label="Go to Veya Shop"
           className="absolute inset-0 z-20"
         />
         {/* Background Image */}
@@ -435,12 +435,12 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* JobPortal */}
+      {/* Ai-Trainer */}
 
       <div className="relative  w-full h-[90vh] overflow-hidden group cursor-pointer">
         <Link
-          href="/jobportal"
-          aria-label="Go to Job Portal"
+          href="/ai-trainer"
+          aria-label="Go to AI Trainer"
           className="absolute inset-0 z-20"
         />
         {/* Background Image */}

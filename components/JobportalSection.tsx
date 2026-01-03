@@ -29,6 +29,7 @@ export default function JobportalSection() {
       font-semibold
       tracking-wide
       cursor-pointer
+      duration-300
       shadow-lg
       text-sm md:text-sm
       hover:bg-[#e85925]
@@ -413,7 +414,7 @@ export default function JobportalSection() {
                       className="
           border-4
           rounded-full
-          mt-2
+          mt-2 pb-1
           w-12 h-12 md:w-14 md:h-14
           flex items-center justify-center
           text-3xl md:text-4xl

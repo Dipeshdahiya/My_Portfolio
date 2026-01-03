@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-export default function ChatbotSection() {
+export default function VeyaShopSection() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export default function ChatbotSection() {
       fixed
       bottom-6 right-6
       z-50
-      bg-black
+      bg-purple-950
       w-auto h-auto
       text-white
       px-5 py-3
@@ -43,7 +43,7 @@ export default function ChatbotSection() {
       shadow-lg
       duration-300
       text-sm md:text-sm
-      hover:bg-purple-900
+      hover:bg-veya
       transition-colors
     "
         >
@@ -67,7 +67,7 @@ export default function ChatbotSection() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('../assets/chatbot.jpg')",
+            backgroundImage: "url('../assets/veya_shopping.png')",
           }}
         />
         {/* Dark Overlay */}
@@ -85,7 +85,7 @@ export default function ChatbotSection() {
             viewport={{ once: false }}
             className="text-white text-4xl md:text-6xl font-semibold text-center"
           >
-            Future of Conversation
+            Curated Beauty. Thoughtful Gifting.
           </motion.h1>
         </div>
 
@@ -101,8 +101,8 @@ export default function ChatbotSection() {
           viewport={{ once: false }}
           className="absolute bottom-8 w-full flex justify-center z-10"
         >
-          <p className="text-purple-900 tracking-[5px] font-semibold text-2xl">
-            CHATBOT
+          <p className="text-purple-950 tracking-[5px] font-semibold text-2xl">
+            VEYA SHOPPING
           </p>
         </motion.div>
       </motion.div>
@@ -113,7 +113,7 @@ export default function ChatbotSection() {
       <div className="w-full h-screen md:h-full">
         <div className="grid grid-cols-1 md:grid-cols-2  h-full">
           {/* LEFT – ABOUT */}
-          <div className="bg-black text-white p-8 md:p-12 flex flex-col justify-center">
+          <div className="bg-veya text-white p-8 md:p-12 flex flex-col justify-center">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -122,7 +122,7 @@ export default function ChatbotSection() {
               className="text-4xl md:text-4xl font-semibold mb-6"
             >
               Chatbot — Human-Like{" "}
-              <span className="text-purple-900">Conversations</span> Powered by
+              <span className="text-purple-950">Conversations</span> Powered by
               AI
             </motion.h2>
 
@@ -131,10 +131,10 @@ export default function ChatbotSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
               viewport={{ once: false, margin: "-120px" }}
-              className="text-gray-400 font-semibold text-base md:text-mg tracking-[1px] leading-relaxed text-justify"
+              className="text-white font-semibold text-base md:text-mg tracking-[1px] leading-relaxed text-justify"
             >
               This chatbot project is a{" "}
-              <span className="text-purple-900 font-medium">
+              <span className="text-purple-950 font-medium">
                 machine learning–based
               </span>{" "}
               conversational system developed as a full-stack web application.
@@ -153,7 +153,7 @@ export default function ChatbotSection() {
           </div>
 
           {/* RIGHT – FEATURES */}
-          <div className="bg-white text-black p-8 md:p-12 flex flex-col items-left lg:items-center justify-center">
+          <div className="bg-purple-950 text-white p-8 md:p-12 flex flex-col items-left lg:items-center justify-center">
             <div>
               <motion.h3
                 initial={{ opacity: 0, y: 30 }}
@@ -170,7 +170,7 @@ export default function ChatbotSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
                 viewport={{ once: false, margin: "-120px" }}
-                className="space-y-4 uppercase items-start text-gray-600 font-semibold text-base md:text-mg tracking-[1px] leading-relaxed"
+                className="space-y-4 uppercase items-start text-veya font-semibold text-base md:text-mg tracking-[1px] leading-relaxed"
               >
                 <li>Smart Conversations</li>
                 <li>Machine Learning Core</li>
@@ -187,7 +187,7 @@ export default function ChatbotSection() {
           ========================== */}
       <section
         ref={sectionRef}
-        className="w-full bg-black h-[80vh] md:h-[110vh] flex items-center justify-center px-6 md:px-12"
+        className="w-full bg-veya h-[80vh] md:h-[110vh] flex items-center justify-center px-6 md:px-12"
       >
         <div className="w-full flex items-center  justify-center ">
           <motion.img
@@ -203,9 +203,9 @@ export default function ChatbotSection() {
         </div>
       </section>
       <div className="w-full h-full md:h-screen">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 h-full">
+        <div className="grid grid-cols-1 md:grid-cols-2  h-full">
           {/* LEFT – SKILLS USED */}
-          <div className="bg-white text-black p-8 md:p-12 flex flex-col items-left lg:items-center justify-center">
+          <div className="bg-purple-950 text-white p-8 md:p-12 flex flex-col items-left lg:items-center justify-center">
             <div>
               <motion.h2
                 initial={{ opacity: 0, y: 30 }}
@@ -221,10 +221,10 @@ export default function ChatbotSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
                 viewport={{ once: false, margin: "-120px" }}
-                className="text-black font-semibold italic  tracking-[2px] text-sm mb-8 -mt-4 "
+                className="text-white font-semibold italic  tracking-[2px] text-sm mb-8 -mt-4 "
               >
                 "Comprehensive Technologies for a{" "}
-                <span className="text-purple-900">Intelligent</span>{" "}
+                <span className="text-veya">Intelligent</span>{" "}
                 Conversations"
               </motion.p>
 
@@ -233,7 +233,7 @@ export default function ChatbotSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
                 viewport={{ once: false, margin: "-120px" }}
-                className="space-y-4 uppercase text-gray-600 font-semibold text-base md:text-mg tracking-[1px] leading-relaxed"
+                className="space-y-4 uppercase text-veya font-semibold text-base md:text-mg tracking-[1px] leading-relaxed"
               >
                 <li>Machine Learning & NLP</li>
                 <li>Python & AI Libraries</li>
@@ -245,7 +245,7 @@ export default function ChatbotSection() {
           </div>
 
           {/* RIGHT – ARCHITECTURE / IMPACT */}
-          <div className="bg-black text-white p-8 md:p-12 flex flex-col justify-center">
+          <div className="bg-veya text-white p-8 md:p-12 flex flex-col justify-center">
             <motion.h3
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -261,7 +261,7 @@ export default function ChatbotSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
               viewport={{ once: false, margin: "-120px" }}
-              className="text-gray-400 font-semibold text-base md:text-mg tracking-[1px] leading-relaxed text-justify"
+              className="text-white font-semibold text-base md:text-mg tracking-[1px] leading-relaxed text-justify"
             >
               This chatbot project was developed with a strong focus on
               real-world conversational systems rather than just academic
@@ -288,7 +288,7 @@ export default function ChatbotSection() {
           </div>
         </div>
       </div>
-      <section className="w-full bg-black h-full md:h-[90vh] px-6 md:px-12 flex items-center">
+      <section className="w-full bg-veya h-full md:h-[90vh] px-6 md:px-12 flex items-center">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full">
           {/* LEFT – TEXT CONTENT */}
           <div className="text-white flex flex-col justify-center">
@@ -300,7 +300,7 @@ export default function ChatbotSection() {
               className="text-4xl md:text-4xl font-semibold mb-6"
             >
               Designed for{" "}
-              <span className="text-purple-900">Speed & Interaction</span>
+              <span className="text-purple-950">Speed & Interaction</span>
             </motion.h2>
 
             <motion.p
@@ -308,7 +308,7 @@ export default function ChatbotSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
               viewport={{ once: false, margin: "-120px" }}
-              className="text-gray-400 font-semibold text-base md:text-mg tracking-[1px] leading-relaxed text-justify"
+              className="text-white font-semibold text-base md:text-mg tracking-[1px] leading-relaxed text-justify"
             >
               Beyond core functionality, the chatbot was optimized to deliver
               fast, smooth, and engaging interactions. Response time,
@@ -342,7 +342,7 @@ export default function ChatbotSection() {
           </motion.div>
         </div>
       </section>
-      <section className="w-full bg-black h-auto pb-0 px-6 md:px-12 flex items-center">
+      <section className="w-full bg-veya h-auto pb-0 px-6 md:px-12 flex items-center">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full">
           {/* LEFT – IMAGE */}
           <motion.div
@@ -377,19 +377,19 @@ export default function ChatbotSection() {
                   <span className="whitespace-nowrap">Connect with</span>
 
                   <span className="flex items-center gap-3 whitespace-nowrap">
-                    <span className="text-purple-900">me</span>
+                    <span className="text-purple-950">me</span>
 
                     <motion.span
                       variants={{
                         rest: {
                           x: 0,
-                          color: "#000000",
-                          borderColor: "#000000",
+                          color: "#7F45AE",
+                          borderColor: "#7F45AE",
                         },
                         hovered: {
                           x: 6,
-                          color: "#e85925",
-                          borderColor: "#e85925",
+                          color: "#2e1065",
+                          borderColor: "#2e1065",
                         },
                       }}
                       transition={{
@@ -418,7 +418,7 @@ export default function ChatbotSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
               viewport={{ once: false, margin: "-120px" }}
-              className="mt-6 text-gray-600 font-semibold text-base pb-20 md:text-mg tracking-[1px] leading-relaxed"
+              className="mt-6 text-white font-semibold text-base pb-20 md:text-mg tracking-[1px] leading-relaxed"
             >
               Whether it’s collaboration, opportunities, or a quick conversation
               about technology and product ideas, I’m always open to meaningful
@@ -438,11 +438,11 @@ export default function ChatbotSection() {
     cursor-pointer
   "
         style={{
-          backgroundImage: "url('../assets/interview.png')",
+          backgroundImage: "url('../assets/ai-trainer.png')",
         }}
       >
         {/* Overlay */}
-        <Link href="/Ai-interview">
+        <Link href="/ai-trainer">
           <motion.div
             variants={{
               rest: { backgroundColor: "rgba(0,0,0,0.4)" },
@@ -468,7 +468,7 @@ export default function ChatbotSection() {
               }}
               transition={{ duration: 0.5, ease: "easeOut" }}
               className="
-              text-purple-900
+              text-purple-950
           font-semibold
           uppercase
           tracking-[6px]
@@ -477,7 +477,7 @@ export default function ChatbotSection() {
           cursor-pointer
         "
             >
-              AI-Interview
+              AI-Trainer
             </motion.span>
           </div>
         </Link>
